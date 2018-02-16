@@ -1,10 +1,4 @@
-﻿//======= Copyright (c) Valve Corporation, All rights reserved. ===============
-//
-// Purpose: Helper for smoothing over transitions between levels.
-//
-//=============================================================================
-
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 using Valve.VR;
 using System.IO;

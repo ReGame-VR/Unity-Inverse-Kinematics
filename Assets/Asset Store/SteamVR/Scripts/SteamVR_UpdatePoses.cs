@@ -1,10 +1,4 @@
-﻿//======= Copyright (c) Valve Corporation, All rights reserved. ===============
-//
-// Purpose: Helper to update poses when using native OpenVR integration.
-//
-//=============================================================================
-
-using UnityEngine;
+﻿using UnityEngine;
 
 [ExecuteInEditMode]
 public class SteamVR_UpdatePoses : MonoBehaviour

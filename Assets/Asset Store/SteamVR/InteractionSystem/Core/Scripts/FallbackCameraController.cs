@@ -1,10 +1,4 @@
-﻿//======= Copyright (c) Valve Corporation, All rights reserved. ===============
-//
-// Purpose: Controls for the non-VR debug camera
-//
-//=============================================================================
-
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 
 namespace Valve.VR.InteractionSystem

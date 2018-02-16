@@ -1,10 +1,4 @@
-﻿//======= Copyright (c) Valve Corporation, All rights reserved. ===============
-//
-// Purpose: Test SteamVR_Controller support.
-//
-//=============================================================================
-
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections.Generic;
 using Valve.VR;
 

@@ -1,10 +1,4 @@
-﻿//======= Copyright (c) Valve Corporation, All rights reserved. ===============
-//
-// Purpose: Custom Unity Events that take in additional parameters
-//
-//=============================================================================
-
-using UnityEngine.Events;
+﻿using UnityEngine.Events;
 using System;
 
 namespace Valve.VR.InteractionSystem

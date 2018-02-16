@@ -1,5 +1,4 @@
-﻿//======= Copyright (c) Valve Corporation, All rights reserved. ===============
-using UnityEngine;
+﻿using UnityEngine;
 using Valve.VR;
 
 public struct ClickedEventArgs

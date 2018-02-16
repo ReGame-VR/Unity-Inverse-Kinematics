@@ -1,10 +1,4 @@
-﻿//======= Copyright (c) Valve Corporation, All rights reserved. ===============
-//
-// Purpose: Draws different sized room-scale play areas for targeting content
-//
-//=============================================================================
-
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Rendering;
 using System.Collections;
 using Valve.VR;

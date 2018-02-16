@@ -1,10 +1,4 @@
-﻿//======= Copyright (c) Valve Corporation, All rights reserved. ===============
-//
-// Purpose: Base class for all the objects that the player can teleport to
-//
-//=============================================================================
-
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Valve.VR.InteractionSystem
 {

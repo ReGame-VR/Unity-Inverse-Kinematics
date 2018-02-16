@@ -1,11 +1,4 @@
-﻿//======= Copyright (c) Valve Corporation, All rights reserved. ===============
-//
-// Purpose: Throwable that uses physics joints to attach instead of just
-//			parenting
-//
-//=============================================================================
-
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections.Generic;
 
 namespace Valve.VR.InteractionSystem

@@ -1,9 +1,3 @@
-//======= Copyright (c) Valve Corporation, All rights reserved. ===============
-//
-// Purpose: Demonstrates the use of the controller hint system
-//
-//=============================================================================
-
 using UnityEngine;
 using System.Collections;
 using Valve.VR;
