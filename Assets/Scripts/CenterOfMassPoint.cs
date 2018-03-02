@@ -17,14 +17,23 @@ public class CenterOfMassPoint : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Vector2 posn = Wii.GetCenterOfBalance(0) / 5f;
+        //Convert the center of balance to meters
+        Vector2 posn = CoPtoM(Wii.GetCenterOfBalance(0));
 
 
         Vector3 tposn = pelvisTracker.position;
         Vector3 hposn = hmd.position;
 
-        // posn.y is equal to 3D posn.z
-        Vector3 new3Dposn = new Vector3((hposn.x + tposn.x)/2 + posn.x, tposn.y, (hposn.z + tposn.z)/2 + posn.y);
+        // WBBposn.y is equal to 3D posn.z
+        float newposnx = posn.x;
+        float newposny = tposn.y;
+        float newposnz = posn.y;
+
+        //Vector3 new3Dposn = new Vector3((hposn.x + tposn.x)/2 + posn.x, tposn.y, (hposn.z + tposn.z)/2 + posn.y);
+
+        // Add 17cm to Z position to accurately measure the center of mass as recommended
+        // by sacral marker study.
+        Vector3 new3Dposn = new Vector3(newposnx, newposny, newposnz);
 
         GetComponent<Transform>().position = new3Dposn; 
 
@@ -38,5 +47,15 @@ public class CenterOfMassPoint : MonoBehaviour {
     public static Vector2 CoPtoCM(Vector2 posn)
     {
         return new Vector2(posn.x * 43.3f / 2f, posn.y * 23.6f / 2f);
+    }
+
+    /// <summary>
+    /// Converts COP ratio to be in terms of meters
+    /// </summary>
+    /// <param name="posn"> The current COB posn, not in terms of meters </param>
+    /// <returns> The posn, in terms of meters </returns>
+    public static Vector2 CoPtoM(Vector2 posn)
+    {
+        return new Vector2(posn.x * 0.433f / 2f, posn.y * 0.236f / 2f);
     }
 }
