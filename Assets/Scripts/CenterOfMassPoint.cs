@@ -17,6 +17,7 @@ public class CenterOfMassPoint : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
         //Convert the center of balance to meters
         Vector2 posn = CoPtoM(Wii.GetCenterOfBalance(0));
 
@@ -28,8 +29,6 @@ public class CenterOfMassPoint : MonoBehaviour {
         float newposnx = posn.x;
         float newposny = tposn.y;
         float newposnz = posn.y;
-
-        //Vector3 new3Dposn = new Vector3((hposn.x + tposn.x)/2 + posn.x, tposn.y, (hposn.z + tposn.z)/2 + posn.y);
 
         // Add 17cm to Z position to accurately measure the center of mass as recommended
         // by sacral marker study.
