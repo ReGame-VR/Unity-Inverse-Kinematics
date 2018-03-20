@@ -1,4 +1,10 @@
-﻿using UnityEngine;
+﻿//======= Copyright (c) Valve Corporation, All rights reserved. ===============
+//
+// Purpose: Displays the arc lines for teleporting and does the traces
+//
+//=============================================================================
+
+using UnityEngine;
 
 namespace Valve.VR.InteractionSystem
 {

@@ -1,4 +1,10 @@
-﻿using UnityEngine;
+﻿//======= Copyright (c) Valve Corporation, All rights reserved. ===============
+//
+// Purpose: Enables/disables objects based on connectivity and assigned roles.
+//
+//=============================================================================
+
+using UnityEngine;
 using Valve.VR;
 
 public class SteamVR_ControllerManager : MonoBehaviour

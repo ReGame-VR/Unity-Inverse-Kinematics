@@ -1,4 +1,10 @@
-﻿using UnityEngine;
+﻿//======= Copyright (c) Valve Corporation, All rights reserved. ===============
+//
+// Purpose: Basic throwable object
+//
+//=============================================================================
+
+using UnityEngine;
 using UnityEngine.Events;
 using System.Collections;
 

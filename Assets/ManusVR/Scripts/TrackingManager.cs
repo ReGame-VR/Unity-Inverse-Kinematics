@@ -1,6 +1,7 @@
 ﻿// Copyright (c) 2018 ManusVR
 using System.Collections;
 using System.Collections.Generic;
+using ManusVR;
 using UnityEngine;
 using Valve.VR;
 
@@ -47,6 +48,7 @@ namespace Assets.ManusVR.Scripts
 
         SteamVR_Events.Action newPosesAction;
 
+        [SerializeField] private TrackingValues _trackingValues;
         public KeyCode switchArmsButton = KeyCode.None;
 
         // Use this for initialization
@@ -86,6 +88,9 @@ namespace Assets.ManusVR.Scripts
                     var currentLocalPos = trackerOffset.localPosition;
                     trackerOffset.localPosition = new Vector3(-currentLocalPos.x, -currentLocalPos.y, -currentLocalPos.z);
                 }
+
+            if (_trackingValues.AreArmsSwitched)
+                SwitchArms(false);
         }
 
         void Awake()
@@ -137,8 +142,10 @@ namespace Assets.ManusVR.Scripts
             }
         }
 
-        public void SwitchArms()
+        public void SwitchArms(bool updateSettings = true)
         {
+            if (updateSettings)
+                _trackingValues.AreArmsSwitched = !_trackingValues.AreArmsSwitched;
             Transform left = trackerTransforms[(int)ERole.LeftHand];
             trackerTransforms[(int)ERole.LeftHand] = trackerTransforms[(int)ERole.RightHand];
             trackerTransforms[(int)ERole.RightHand] = left;

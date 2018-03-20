@@ -1,4 +1,10 @@
-﻿using UnityEngine;
+﻿//======= Copyright (c) Valve Corporation, All rights reserved. ===============
+//
+// Purpose: Example menu using OnGUI with SteamVR_Camera's overlay support
+//
+//=============================================================================
+
+using UnityEngine;
 using Valve.VR;
 
 public class SteamVR_Menu : MonoBehaviour

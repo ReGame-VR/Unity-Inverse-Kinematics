@@ -1,4 +1,10 @@
-﻿using UnityEngine;
+﻿//======= Copyright (c) Valve Corporation, All rights reserved. ===============
+//
+// Purpose: An area that the player can teleport to
+//
+//=============================================================================
+
+using UnityEngine;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif

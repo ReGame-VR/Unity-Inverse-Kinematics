@@ -157,6 +157,7 @@ GameObject:
   - component: {fileID: 114494543845871370}
   - component: {fileID: 114033067724775910}
   - component: {fileID: 114826997484326300}
+  - component: {fileID: 114065362072556064}
   m_Layer: 0
   m_Name: ManusVR
   m_TagString: Untagged
@@ -3136,6 +3137,7 @@ MonoBehaviour:
   HMD: {fileID: 4426625439845526}
   leftTracker: {fileID: 4887274843979932}
   rightTracker: {fileID: 4891409865220800}
+  _trackingValues: {fileID: 11400000, guid: d916abeedd4fe1a44be655a79c673ba0, type: 2}
   switchArmsButton: 114
 --- !u!114 &114044909032825118
 MonoBehaviour:
@@ -3158,6 +3160,22 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 3
+--- !u!114 &114065362072556064
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1068307992394098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9428b86835052694581734149f70b552, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RecorderdSource: {fileID: 4900000, guid: f7d87d286e178b14ca6c612627e71eff, type: 3}
+  PlayOnStart: 1
+  PlayGloveData: 1
+  PlayArmPositionData: 1
+  PlayArmRotationData: 1
 --- !u!114 &114118063623994826
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3227,6 +3245,7 @@ MonoBehaviour:
   RotateLeftHandR: 97
   RotateRightHandL: 119
   RotateRightHandR: 113
+  _trackingValues: {fileID: 11400000, guid: d916abeedd4fe1a44be655a79c673ba0, type: 2}
 --- !u!114 &114588159958714584
 MonoBehaviour:
   m_ObjectHideFlags: 1

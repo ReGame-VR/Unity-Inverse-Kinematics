@@ -1,4 +1,10 @@
-﻿using UnityEngine;
+﻿//======= Copyright (c) Valve Corporation, All rights reserved. ===============
+//
+// Purpose: Sets a random rotation for the arrow head
+//
+//=============================================================================
+
+using UnityEngine;
 using System.Collections;
 
 namespace Valve.VR.InteractionSystem

@@ -1,4 +1,10 @@
-﻿using UnityEngine;
+﻿//======= Copyright (c) Valve Corporation, All rights reserved. ===============
+//
+// Purpose: Used to render an external camera of vr player (split front/back).
+//
+//=============================================================================
+
+using UnityEngine;
 using UnityEngine.Rendering;
 using Valve.VR;
 

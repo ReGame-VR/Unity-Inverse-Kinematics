@@ -1,4 +1,10 @@
-﻿using UnityEngine;
+﻿//======= Copyright (c) Valve Corporation, All rights reserved. ===============
+//
+// Purpose: Adds SteamVR render support to existing camera objects
+//
+//=============================================================================
+
+using UnityEngine;
 using System.Collections;
 using System.Reflection;
 using Valve.VR;
@@ -191,14 +197,14 @@ public class SteamVR_Camera : MonoBehaviour
 
 			while (transform.childCount > 0)
 				transform.GetChild(0).parent = head;
-#if !UNITY_2017_2_OR_NEWER
+
 			var guiLayer = GetComponent<GUILayer>();
 			if (guiLayer != null)
 			{
 				DestroyImmediate(guiLayer);
 				head.gameObject.AddComponent<GUILayer>();
 			}
-#endif
+
 			var audioListener = GetComponent<AudioListener>();
 			if (audioListener != null)
 			{
@@ -222,14 +228,14 @@ public class SteamVR_Camera : MonoBehaviour
 		// Move children and components from head back to camera.
 		while (head.childCount > 0)
 			head.GetChild(0).parent = transform;
-#if !UNITY_2017_2_OR_NEWER
+
 		var guiLayer = head.GetComponent<GUILayer>();
 		if (guiLayer != null)
 		{
 			DestroyImmediate(guiLayer);
 			gameObject.AddComponent<GUILayer>();
 		}
-#endif
+
 		if (ears != null)
 		{
 			while (ears.childCount > 0)

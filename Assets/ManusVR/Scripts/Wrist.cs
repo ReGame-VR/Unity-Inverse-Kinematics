@@ -43,7 +43,7 @@ namespace Assets.ManusVR.Scripts
                 ? Hand.HandData.GetWristRotation(DeviceType)
                 : _lastRotation;
             _lastRotation = wristRotation;
-            return Quaternion.Euler(0.0f, Hand.HandData.HandYawOffset[DeviceType], 0.0f) * wristRotation;
+            return Quaternion.Euler(0.0f, Hand.HandData.TrackingValues.HandYawOffset[DeviceType], 0.0f) * wristRotation;
         }
 
         public virtual int AmountOfCollidingObjects()

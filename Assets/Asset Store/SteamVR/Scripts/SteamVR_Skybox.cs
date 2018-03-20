@@ -1,4 +1,10 @@
-﻿using UnityEngine;
+﻿//======= Copyright (c) Valve Corporation, All rights reserved. ===============
+//
+// Purpose: Sets cubemap to use in the compositor.
+//
+//=============================================================================
+
+using UnityEngine;
 using Valve.VR;
 
 public class SteamVR_Skybox : MonoBehaviour

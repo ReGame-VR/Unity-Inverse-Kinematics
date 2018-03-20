@@ -1,4 +1,10 @@
-﻿using UnityEngine;
+﻿//======= Copyright (c) Valve Corporation, All rights reserved. ===============
+//
+// Purpose: Utility functions used in several places
+//
+//=============================================================================
+
+using UnityEngine;
 using System;
 using System.Collections;
 using System.Collections.Generic;

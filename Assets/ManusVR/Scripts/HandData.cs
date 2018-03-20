@@ -2,6 +2,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using ManusVR;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -22,9 +23,9 @@ namespace Assets.ManusVR.Scripts
     /// </summary>
     public enum CloseValue
     {
-        Fist = 65,
-        Small = 30,
-        Tiny = 15,
+        Fist = 95,
+        Small = 60,
+        Tiny = 20,
         Open = 5
     }
 
@@ -73,7 +74,12 @@ namespace Assets.ManusVR.Scripts
         private readonly Vector3 _postRotThumbLeft = new Vector3(-21.7f, 109.24f, -164.3f);
         private readonly Vector3 _postRotThumbRight = new Vector3(212.1f, 82.2f, -28f);
 
-        public Dictionary<device_type_t, float> HandYawOffset = new Dictionary<device_type_t, float>();
+        [SerializeField] private TrackingValues _trackingValues;
+
+        public TrackingValues TrackingValues
+        {
+            get { return _trackingValues; }
+        }
 
         /// <summary>
         /// Get the close value of the hand
@@ -111,13 +117,6 @@ namespace Assets.ManusVR.Scripts
         }
 
         private HandValue[] _handValues = new HandValue[2];
-
-        public void Awake()
-        {
-            HandYawOffset.Add(device_type_t.GLOVE_RIGHT, 0);
-            HandYawOffset.Add(device_type_t.GLOVE_LEFT, 0);
-        }
-
 
         // Use this for initialization
         public virtual void Start()
@@ -167,13 +166,13 @@ namespace Assets.ManusVR.Scripts
         {
             const float speed = 30;
             if (Input.GetKey(RotateRightHandL))
-                HandYawOffset[device_type_t.GLOVE_RIGHT] += Time.deltaTime * speed;
+                _trackingValues.HandYawOffset[device_type_t.GLOVE_RIGHT] += Time.deltaTime * speed;
             if (Input.GetKey(RotateRightHandR))
-                HandYawOffset[device_type_t.GLOVE_RIGHT] -= Time.deltaTime * speed;
+                _trackingValues.HandYawOffset[device_type_t.GLOVE_RIGHT] -= Time.deltaTime * speed;
             if (Input.GetKey(RotateLeftHandL))
-                HandYawOffset[device_type_t.GLOVE_LEFT] += Time.deltaTime * speed;
+                _trackingValues.HandYawOffset[device_type_t.GLOVE_LEFT] += Time.deltaTime * speed;
             if (Input.GetKey(RotateLeftHandR))
-                HandYawOffset[device_type_t.GLOVE_LEFT] -= Time.deltaTime * speed;
+                _trackingValues.HandYawOffset[device_type_t.GLOVE_LEFT] -= Time.deltaTime * speed;
         }
 
         /// <summary>

@@ -1,4 +1,10 @@
-﻿using UnityEngine;
+﻿//======= Copyright (c) Valve Corporation, All rights reserved. ===============
+//
+// Purpose: Makes this object ignore any hovering by the hands
+//
+//=============================================================================
+
+using UnityEngine;
 
 namespace Valve.VR.InteractionSystem
 {

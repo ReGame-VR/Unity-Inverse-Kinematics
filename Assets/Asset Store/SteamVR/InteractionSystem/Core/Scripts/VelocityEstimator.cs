@@ -1,4 +1,10 @@
-﻿using UnityEngine;
+﻿//======= Copyright (c) Valve Corporation, All rights reserved. ===============
+//
+// Purpose: Estimates the velocity of an object based on change in position
+//
+//=============================================================================
+
+using UnityEngine;
 using System.Collections;
 
 namespace Valve.VR.InteractionSystem

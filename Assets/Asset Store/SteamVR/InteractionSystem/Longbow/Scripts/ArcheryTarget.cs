@@ -1,4 +1,10 @@
-﻿using UnityEngine;
+﻿//======= Copyright (c) Valve Corporation, All rights reserved. ===============
+//
+// Purpose: Target that sends events when hit by an arrow
+//
+//=============================================================================
+
+using UnityEngine;
 using UnityEngine.Events;
 using System.Collections;
 

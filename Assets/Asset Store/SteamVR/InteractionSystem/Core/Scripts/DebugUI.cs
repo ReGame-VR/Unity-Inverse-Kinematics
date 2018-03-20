@@ -1,4 +1,10 @@
-﻿using UnityEngine;
+﻿//======= Copyright (c) Valve Corporation, All rights reserved. ===============
+//
+// Purpose: Debug UI shown for the player
+//
+//=============================================================================
+
+using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 

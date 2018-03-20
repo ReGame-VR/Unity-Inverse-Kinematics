@@ -1,19 +1,10 @@
-﻿using UnityEngine;
+﻿//======= Copyright (c) Valve Corporation, All rights reserved. ===============
+//
+// Purpose: Helper to display various hmd stats via GUIText
+//
+//=============================================================================
 
-#if UNITY_2017_2_OR_NEWER
-
-[ExecuteInEditMode]
-public class SteamVR_Stats : MonoBehaviour
-{
-	void Awake()
-	{
-		Debug.Log("SteamVR_Stats is deprecated in Unity 2017.2 - REMOVING");
-		DestroyImmediate(this);
-	}
-}
-
-#else
-
+using UnityEngine;
 using Valve.VR;
 
 public class SteamVR_Stats : MonoBehaviour
@@ -74,6 +65,4 @@ public class SteamVR_Stats : MonoBehaviour
 		}
 	}
 }
-
-#endif
 

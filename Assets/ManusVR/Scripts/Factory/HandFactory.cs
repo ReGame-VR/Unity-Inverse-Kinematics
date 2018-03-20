@@ -1,4 +1,5 @@
-﻿
+﻿// Copyright (c) 2018 ManusVR
+using Assets.ManusVR.Scripts.PhysicalInteraction;
 using UnityEngine;
 
 namespace Assets.ManusVR.Scripts.Factory
@@ -19,6 +20,9 @@ namespace Assets.ManusVR.Scripts.Factory
             {
                 case HandType.Normal:
                     finger = parent.AddComponent<RegularFinger>();
+                    break;
+                case HandType.Physics:
+                    finger = parent.AddComponent<PhysicsFinger>();
                     break;
                 default:
                     finger = parent.AddComponent<RegularFinger>();
@@ -42,6 +46,9 @@ namespace Assets.ManusVR.Scripts.Factory
                 case HandType.Normal:
                     wrist = parent.AddComponent<RegularWrist>();
                     break;
+                case HandType.Physics:
+                    wrist = parent.AddComponent<PhysicsWrist>();
+                    break;
                 default:
                     wrist = parent.AddComponent<RegularWrist>();
                     break;
@@ -51,6 +58,13 @@ namespace Assets.ManusVR.Scripts.Factory
             return wrist;
         }
 
+        public static Phalange GetPhalange(GameObject parent, FingerIndex index, int pos, device_type_t DeviceType)
+        {
+            Phalange phalange = parent.AddComponent<Phalange>();
+            phalange.PhalangeData = new PhalangeData(index, pos, DeviceType);
+            return phalange;
+        
+        }
 
         public static Hand GetHand(GameObject parent, HandType type, HandData handData, HandManager manager, device_type_t deviceType)
         {
@@ -59,6 +73,9 @@ namespace Assets.ManusVR.Scripts.Factory
             {
                 case HandType.Normal:
                     hand = parent.AddComponent<RegularHand>();
+                    break;
+                case HandType.Physics:
+                    hand = parent.AddComponent<PhysicsHand>();
                     break;
                 default:
                     hand = parent.AddComponent<RegularHand>();

@@ -1,4 +1,10 @@
-﻿using UnityEngine;
+﻿//======= Copyright (c) Valve Corporation, All rights reserved. ===============
+//
+// Purpose: Utilities for working with SteamVR
+//
+//=============================================================================
+
+using UnityEngine;
 using System.Collections;
 using System.Runtime.InteropServices;
 using Valve.VR;

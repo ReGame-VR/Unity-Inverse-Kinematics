@@ -1,4 +1,10 @@
-﻿using UnityEngine;
+﻿//======= Copyright (c) Valve Corporation, All rights reserved. ===============
+//
+// Purpose: Handles aligning audio listener when using speakers.
+//
+//=============================================================================
+
+using UnityEngine;
 using Valve.VR;
 
 [RequireComponent(typeof(AudioListener))]

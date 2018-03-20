@@ -1,4 +1,10 @@
-﻿using UnityEngine;
+﻿//======= Copyright (c) Valve Corporation, All rights reserved. ===============
+//
+// Purpose: Flips the camera output back to normal for D3D.
+//
+//=============================================================================
+
+using UnityEngine;
 
 [ExecuteInEditMode]
 public class SteamVR_CameraFlip : MonoBehaviour

@@ -1,4 +1,10 @@
-﻿using UnityEngine;
+﻿//======= Copyright (c) Valve Corporation, All rights reserved. ===============
+//
+// Purpose: Sends simple controller button events to UnityEvents
+//
+//=============================================================================
+
+using UnityEngine;
 using UnityEngine.Events;
 
 namespace Valve.VR.InteractionSystem

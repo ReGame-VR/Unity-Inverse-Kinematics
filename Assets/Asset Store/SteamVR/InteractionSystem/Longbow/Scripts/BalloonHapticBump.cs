@@ -1,4 +1,10 @@
-﻿using UnityEngine;
+﻿//======= Copyright (c) Valve Corporation, All rights reserved. ===============
+//
+// Purpose: Provides a haptic bump when colliding with balloons
+//
+//=============================================================================
+
+using UnityEngine;
 using System.Collections;
 
 namespace Valve.VR.InteractionSystem

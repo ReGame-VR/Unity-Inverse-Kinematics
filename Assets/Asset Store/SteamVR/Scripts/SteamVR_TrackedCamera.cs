@@ -1,4 +1,26 @@
-﻿using UnityEngine;
+﻿//======= Copyright (c) Valve Corporation, All rights reserved. ===============
+//
+// Purpose: Provides access to video feed and poses of tracked cameras.
+//
+// Usage:
+//			var source = SteamVR_TrackedCamera.Distorted();
+//			var source = SteamVR_TrackedCamera.Undistorted();
+// or
+//			var undistorted = true; // or false
+//			var source = SteamVR_TrackedCamera.Source(undistorted);
+//
+// - Distorted feeds are the decoded images from the camera.
+// - Undistorted feeds correct for the camera lens distortion (a.k.a. fisheye)
+//   to make straight lines straight.
+//
+// VideoStreamTexture objects must be symmetrically Acquired and Released to
+// ensure the video stream is activated, and shutdown properly once there are
+// no more consumers.  You only need to Acquire once when starting to use a
+// stream, and Release when you are done using it (as opposed to every frame).
+//
+//=============================================================================
+
+using UnityEngine;
 using Valve.VR;
 
 public class SteamVR_TrackedCamera

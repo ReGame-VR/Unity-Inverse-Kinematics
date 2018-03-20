@@ -1,3 +1,25 @@
+//#define TEST_FADE_VIEW
+//======= Copyright (c) Valve Corporation, All rights reserved. ===============
+//
+// Purpose:	CameraFade script adapted to work with SteamVR.
+//
+// Usage:	Add to your top level SteamVR_Camera (the one with ApplyDistoration
+//			checked) and drag a reference to this component into SteamVR_Camera
+//			RenderComponents list.  Then call the static helper function
+//			SteamVR_Fade.Start with the desired color and duration.
+//			Use a duration of zero to set the start color.
+//
+// Example:	Fade down from black over one second.
+//			SteamVR_Fade.Start(Color.black, 0);
+//			SteamVR_Fade.Start(Color.clear, 1);
+//
+// Note:	This component is provided to fade out a single camera layer's
+//			scene view.  If instead you want to fade the entire view, use:
+//			SteamVR_Fade.View(Color.black, 1);
+//			(Does not affect the game view, however.)
+//
+//=============================================================================
+
 using UnityEngine;
 using Valve.VR;
 

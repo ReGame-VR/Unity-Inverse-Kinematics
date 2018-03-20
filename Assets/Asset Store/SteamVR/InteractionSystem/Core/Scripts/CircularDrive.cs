@@ -1,4 +1,10 @@
-﻿using UnityEngine;
+﻿//======= Copyright (c) Valve Corporation, All rights reserved. ===============
+//
+// Purpose: Interactable that can be used to move in a circular motion
+//
+//=============================================================================
+
+using UnityEngine;
 using UnityEngine.Events;
 using System.Collections;
 

@@ -1,4 +1,10 @@
-﻿using UnityEngine;
+﻿//======= Copyright (c) Valve Corporation, All rights reserved. ===============
+//
+// Purpose: Triggers haptic pulses based on distance between 2 positions
+//
+//=============================================================================
+
+using UnityEngine;
 using System.Collections;
 
 namespace Valve.VR.InteractionSystem

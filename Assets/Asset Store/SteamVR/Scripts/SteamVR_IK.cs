@@ -1,4 +1,10 @@
-﻿using UnityEngine;
+﻿//======= Copyright (c) Valve Corporation, All rights reserved. ===============
+//
+// Purpose: Simple two bone ik solver.
+//
+//=============================================================================
+
+using UnityEngine;
 
 public class SteamVR_IK : MonoBehaviour
 {

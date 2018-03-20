@@ -1,4 +1,10 @@
-﻿using UnityEngine;
+﻿//======= Copyright (c) Valve Corporation, All rights reserved. ===============
+//
+// Purpose: The bow
+//
+//=============================================================================
+
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 

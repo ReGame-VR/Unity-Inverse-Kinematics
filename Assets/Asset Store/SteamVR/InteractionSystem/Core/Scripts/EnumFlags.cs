@@ -1,4 +1,10 @@
-﻿using UnityEngine;
+﻿//======= Copyright (c) Valve Corporation, All rights reserved. ===============
+//
+// Purpose: Allows Enums to be shown in the inspector as flags
+//
+//=============================================================================
+
+using UnityEngine;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif

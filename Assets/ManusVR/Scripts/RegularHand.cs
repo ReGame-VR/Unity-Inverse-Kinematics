@@ -22,13 +22,21 @@ namespace Assets.ManusVR.Scripts
             if (Input.GetKeyDown(CalibrateKey))
             {
                 Debug.Log("Calibrated a hand.");
-                HandData.HandYawOffset[DeviceType] = AllignmentOffset();
+                HandData.TrackingValues.HandYawOffset[DeviceType] = AllignmentOffset();
             }
+        }
+
+        private void AllignWrist(HandData handData, float offset)
+        {
+            Debug.Log("Calibrated a hand.");
+            WristTransform.rotation = handData.GetWristRotation(DeviceType);
+
+            HandData.TrackingValues.HandYawOffset[DeviceType] = offset;
         }
 
         private float AllignmentOffset()
         {
-            var offset = WristTransform.localEulerAngles.z - HandData.HandYawOffset[DeviceType];
+            var offset = WristTransform.localEulerAngles.z - HandData.TrackingValues.HandYawOffset[DeviceType];
             return -offset;
         }
     }

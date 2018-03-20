@@ -159,13 +159,23 @@ namespace Assets.ManusVR.Scripts
         
         }
 
+        /// <summary>
+        /// Enables or disables the rotation of the wrist and thumb
+        /// </summary>
+        /// <param name="enabled"></param>
+        public virtual void EnableRotation(bool enabled)
+        {
+            Wrist.enabled = enabled;
+            _fingerControllers[FingerIndex.thumb].enabled = enabled;
+        }
+
         public virtual Quaternion ThumbRotation()
         {
             var thumbRotation = HandData.ValidOutput(DeviceType)
                 ? HandManager.HandData.GetThumbRotation(DeviceType)
                 : _lastThumbRotation;
             _lastThumbRotation = thumbRotation;
-            return Quaternion.Euler(0.0f, HandData.HandYawOffset[DeviceType], 0.0f) * thumbRotation;
+            return Quaternion.Euler(0.0f, HandData.TrackingValues.HandYawOffset[DeviceType], 0.0f) * thumbRotation;
         }
 
         public virtual int AmountOfCollidingObjects()

@@ -1,4 +1,11 @@
-﻿using UnityEngine;
+﻿//======= Copyright (c) Valve Corporation, All rights reserved. ===============
+//
+// Purpose: Unparents this object and optionally destroys it after the sound
+//			has played
+//
+//=============================================================================
+
+using UnityEngine;
 using System.Collections;
 
 namespace Valve.VR.InteractionSystem

@@ -1,4 +1,10 @@
-﻿using UnityEngine;
+﻿//======= Copyright (c) Valve Corporation, All rights reserved. ===============
+//
+// Purpose: Makes the hand act as an input module for Unity's event system
+//
+//=============================================================================
+
+using UnityEngine;
 using System.Collections;
 using UnityEngine.EventSystems;
 

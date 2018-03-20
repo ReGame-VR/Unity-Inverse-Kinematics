@@ -1,4 +1,23 @@
-﻿using UnityEngine;
+﻿//======= Copyright (c) Valve Corporation, All rights reserved. ===============
+//
+// Purpose: Simple event system for SteamVR.
+//
+// Example usage:
+//
+//			void OnDeviceConnected(int i, bool connected) { ... }
+//			SteamVR_Events.DeviceConnected.Listen(OnDeviceConnected); // Usually in OnEnable
+//			SteamVR_Events.DeviceConnected.Remove(OnDeviceConnected); // Usually in OnDisable
+//
+// Alternatively, if Listening/Removing often these can be cached as follows:
+//
+//			SteamVR_Event.Action deviceConnectedAction;
+//			void OnAwake() { deviceConnectedAction = SteamVR_Event.DeviceConnectedAction(OnDeviceConnected); }
+//			void OnEnable() { deviceConnectedAction.enabled = true; }
+//			void OnDisable() { deviceConnectedAction.enabled = false; }
+//
+//=============================================================================
+
+using UnityEngine;
 using UnityEngine.Events;
 using Valve.VR;
 

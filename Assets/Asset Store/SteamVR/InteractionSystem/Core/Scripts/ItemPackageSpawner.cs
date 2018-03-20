@@ -1,4 +1,10 @@
-﻿using UnityEngine;
+﻿//======= Copyright (c) Valve Corporation, All rights reserved. ===============
+//
+// Purpose: Handles the spawning and returning of the ItemPackage
+//
+//=============================================================================
+
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -213,19 +219,6 @@ namespace Valve.VR.InteractionSystem
 		//-------------------------------------------------
 		private void HandHoverUpdate( Hand hand )
 		{
-			if ( takeBackItem && requireTriggerPressToReturn )
-			{
-				if ( hand.controller != null && hand.controller.GetHairTriggerDown() )
-				{
-					ItemPackage currentAttachedItemPackage = GetAttachedItemPackage( hand );
-					if ( currentAttachedItemPackage == itemPackage )
-					{
-						TakeBackItem( hand );
-						return; // So that we don't pick up an ItemPackage the same frame that we return it
-					}
-				}
-			}
-
 			if ( requireTriggerPressToTake )
 			{
 				if ( hand.controller != null && hand.controller.GetHairTriggerDown() )

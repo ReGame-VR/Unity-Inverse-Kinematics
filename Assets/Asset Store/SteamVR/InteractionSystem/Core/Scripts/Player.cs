@@ -1,4 +1,10 @@
-﻿using UnityEngine;
+﻿//======= Copyright (c) Valve Corporation, All rights reserved. ===============
+//
+// Purpose: Player interface used to query HMD transforms and VR hands
+//
+//=============================================================================
+
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
